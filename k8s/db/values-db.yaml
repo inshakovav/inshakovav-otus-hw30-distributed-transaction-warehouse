@@ -1,6 +1,0 @@
-global:
-  postgresql:
-    auth:
-      database: mydb
-      username: myuser
-      password: mypassword
