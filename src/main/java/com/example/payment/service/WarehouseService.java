@@ -4,8 +4,7 @@ import com.example.payment.dto.PaymentExecutedMessage;
 import com.example.payment.dto.ProductReservedMessage;
 import com.example.payment.dto.WarehouseReservationRejectedMessage;
 import com.example.payment.entity.ProductReservationEntity;
-import com.example.payment.entity.ProductStatus;
-import com.example.payment.kafka.KafkaConsumerSagaCompensationService;
+import com.example.payment.entity.ProductReservationStatus;
 import com.example.payment.kafka.KafkaProducerService;
 import com.example.payment.repository.ProductReservedRepository;
 import lombok.RequiredArgsConstructor;
@@ -51,7 +50,7 @@ public class WarehouseService {
 
     public ProductReservationEntity saveToDb(PaymentExecutedMessage message) {
         ProductReservationEntity entity = new ProductReservationEntity();
-        entity.setStatus(ProductStatus.RESERVED);
+        entity.setStatus(ProductReservationStatus.RESERVED);
         entity.setOrderId(message.getOrderId());
         ProductReservationEntity dbEntity = productReservedRepository.save(entity);
         return dbEntity;

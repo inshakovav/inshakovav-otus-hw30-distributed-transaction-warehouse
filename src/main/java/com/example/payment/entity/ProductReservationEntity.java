@@ -29,7 +29,7 @@ public class ProductReservationEntity {
     private Timestamp updatedAt;
 
     @Enumerated(EnumType.STRING)
-    private ProductStatus status;
+    private ProductReservationStatus status;
 
     private Long orderId;
 }

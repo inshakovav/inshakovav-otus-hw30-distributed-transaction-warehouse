@@ -1,5 +1,6 @@
 package com.example.payment.kafka;
 
+import com.example.payment.dto.DeliveryExecutedMessage;
 import com.example.payment.dto.PaymentExecutedMessage;
 import com.example.payment.service.WarehouseService;
 import lombok.RequiredArgsConstructor;
@@ -20,6 +21,5 @@ public class KafkaConsumerService {
         } catch (Exception e) {
             log.warn("Kafka unknown error Order processing: ", message);
         }
-
     }
 }

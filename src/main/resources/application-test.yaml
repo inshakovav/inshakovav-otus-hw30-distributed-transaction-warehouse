@@ -9,6 +9,7 @@ payment:
     payment-rejected-topic: hw30.payment.rejected-warehouse-test
     warehouse-product-reserved-topic: hw30.warehouse.product.reserved-warehouse-test
     warehouse-product-reservation-rejected-topic: hw30.warehouse.product.reservation.rejected-warehouse-test
+    delivery-executed-topic: hw30.delivery.executed-warehouse-test
     delivery-rejected-topic: hw30.delivery.rejected-warehouse-test
 
 spring:
