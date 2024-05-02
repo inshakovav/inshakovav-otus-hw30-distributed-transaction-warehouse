@@ -17,7 +17,7 @@ spring:
     name: warehouse
 
   datasource:
-    url: jdbc:postgresql://my-release-postgresql.default.svc.cluster.local:5432/db_otus_30
+    url: jdbc:postgresql://my-db-postgresql.default.svc.cluster.local:5432/db_otus_30
     username: ${DB_USER}
     password: ${DB_PASS}
     hikari:
@@ -27,7 +27,7 @@ spring:
     schemas: warehouse_scheme
 
   kafka:
-    bootstrap-servers: localhost:29092
+    bootstrap-servers: my-kafka.default.svc.cluster.local:9092
     consumer:
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer

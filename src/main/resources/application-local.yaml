@@ -9,3 +9,6 @@ spring:
 #  flyway:
 #    enabled: true
 #    schemas: scheme
+
+  kafka:
+    bootstrap-servers: localhost:29092
