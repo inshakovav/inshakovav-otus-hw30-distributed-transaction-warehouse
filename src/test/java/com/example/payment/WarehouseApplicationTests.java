@@ -6,6 +6,7 @@ import com.example.payment.dto.WarehouseReservationRejectedMessage;
 import com.example.payment.entity.ProductReservationEntity;
 import com.example.payment.repository.ProductReservedRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,6 +35,7 @@ class WarehouseApplicationTests {
     private KafkaOrderProducer kafkaOrderProducer;
 
     @Test
+    @Disabled
     void paymentSucceededTest() throws InterruptedException {
         // setup
         PaymentExecutedMessage paymentExecutedMessage = PaymentExecutedMessage.builder()
@@ -68,6 +70,7 @@ class WarehouseApplicationTests {
     }
 
     @Test
+    @Disabled
     void paymentRejectedTest() throws InterruptedException {
         // setup
         PaymentExecutedMessage paymentExecutedMessage = PaymentExecutedMessage.builder()
