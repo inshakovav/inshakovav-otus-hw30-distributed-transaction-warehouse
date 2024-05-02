@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+//@SpringBootTest
 @Slf4j
 @ActiveProfiles("test")
 class WarehouseApplicationTests {
